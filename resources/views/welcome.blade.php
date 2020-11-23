@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
-
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <!-- Styles -->
         <style>
             html, body {
@@ -61,40 +61,57 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            div.container {
+                min-height: 10em;
+                display: table-cell;
+                vertical-align: middle
+            }
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: white;
+                color: black;
+                text-align: center;
+            }
+            #leftHalf {
+                background: url({{url('images/left.jpg')}});
+                background-size: 700px 800px;
+                width: 50%;
+                position: absolute;
+                left: 0px;
+                height: 100%;
+            }
+
+            #rightHalf {
+                width: 50%;
+                position: absolute;
+                right: 0px;
+                height: 100%;
+            }
+            p span {
+                display: block;
+            }
+
         </style>
     </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+    <body style="background-color: #dae0e5;">
+    <div id="leftHalf" class="flex-center position-ref full-height">
+{{--                <button class="btn btn-primary btn-block" style="margin: 40px">SignUp</button>--}}
+    </div>
+    <div id="rightHalf">
+    <div class="flex-center position-ref full-height" style="font-size: 45px; color: #1d643b; font-weight: bold">
+            iDIGITAL <small style=" margin-top: 60px;margin-right: 110px;position:absolute;font-size: 12px"> (for client updates)</small>
+            <a href="/login" class="btn btn-success"  style="margin-left: 10px">
+                Click Here To SignIn
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+            </a>
         </div>
+    </div>
+
+{{--        <div class="footer">--}}
+{{--            <small>Powered By Ninjathetech.com</small>--}}
+{{--        </div>--}}
     </body>
 </html>

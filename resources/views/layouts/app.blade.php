@@ -33,6 +33,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            @auth
+                                <a class="nav-link"  href="{{ route('new_client') }}">New Client</a>
+                            @endauth
+                        </li>
+                        <li class="nav-item dropdown">
+                            @auth
+                                <a class="nav-link"  href="{{ route('onboard_client') }}">OnBoard Clients </a>
+                            @endauth
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mr-auto">
 
                     </ul>
 
@@ -79,7 +91,7 @@
 </body>
 <style>
     body {
-        background:url({{url('images/bc.jpeg')}})  ;
+        {{--background:url({{url('images/bc.jpeg')}})  ;--}}
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
