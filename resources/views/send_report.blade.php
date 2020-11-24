@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="card">
-            <form method="POST" action="/save_client/{{$client['id']}}" enctype="multipart/form-data">
+            <form method="POST" action="/send_report/{{$client['id']}}" enctype="multipart/form-data">
                 @csrf
                 <div class="card-header">
                     <h3>Send Report To {{$client['business_name']}} :-</h3>
