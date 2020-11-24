@@ -39,10 +39,10 @@ class ReportEmail extends Mailable
             ->view('mails.report')
             ->text('mails.report_plain')
             ->subject('Project Progress Report')
-            ->attach($this->client['document'][0]->getRealPath(),
+            ->attach($this->client['document']->getRealPath(),
                 [
-                    'as' => $this->client['document'][0]->getClientOriginalName(),
-                    'mime' => $this->client['document'][0]->getClientMimeType(),
+                    'as' => $this->client['document']->getClientOriginalName(),
+                    'mime' => $this->client['document']->getClientMimeType(),
                 ]);
     }
 }
