@@ -2,6 +2,10 @@
 
 @section('content')
     <div class="container">
+        <h2 style="color: #dae0e5"><b>
+                <span class="glyphicon glyphicon-flag" aria-hidden="true" style="margin-bottom: 2%"></span>
+                All Clients:
+            </b></h2>
         <table class="table table-responsive" style="background-color: white">
             <thead>
             <tr>

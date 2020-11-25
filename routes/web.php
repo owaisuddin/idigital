@@ -23,5 +23,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/client_report/{id}', 'ClientController@sendReport')->name('client_report');
     Route::post('/save_client', 'ClientController@store')->name('save_client');
     Route::post('/send_report/{id}', 'ClientController@sendReportToClient')->name('send_report');
+    Route::get('/send_sms', 'SmsController@sendSms')->name('send_sms');
+    Route::post('/sendMessage', 'SmsController@sendCustomMessage')->name('sendMessage');
 });
 

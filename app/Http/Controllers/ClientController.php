@@ -131,12 +131,6 @@ class ClientController extends Controller
         $message = $request->get('message');
         $document = $request->file('file');
 
-//        if ($document->getError() == 1) {
-//            $max_size = $document->getMaxFileSize() / 1024 / 1024;  // Get size in Mb
-//            $error = 'The document size must be less than ' . $max_size . 'Mb.';
-//            return redirect()->back()->with('flash_danger', $error);
-//        }
-
         $data = [
             'document' => $document,
             'message' => $message,

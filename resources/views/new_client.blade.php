@@ -1,11 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container card" style="padding-top:10px">
-        <div class="row justify-content-center">
+    <div class="container">
+        <h2 style="color: #dae0e5"><b>
+                <span class="glyphicon glyphicon-plus" aria-hidden="true" style="margin-bottom: 2%"></span>
+                Add Client:
+            </b></h2>
+        <div class="row card justify-content-center" style="padding-top:40px">
             <div class="container">
-                <b><h2>Client Registration Form :-</h2></b>
-                <hr/>
                 <form method="POST" action="/save_client">
                     @csrf
                     <div class="row">
@@ -59,7 +61,7 @@
                                        class="form-control @error('phone_number') is-invalid @enderror"
                                        name="phone_number" required
                                        value="{{ old('phone_number') }}"
-                                       placeholder="Enter client phone number"
+                                       placeholder="Enter client phone number in that format +923102323700"
                                        value="{{ !empty($client->phone_number) ? $client->phone_number : ''}}" required
                                        autocomplete="phone_number"
                                        id="phone_number"
@@ -292,7 +294,7 @@
                         <!--  col-md-6   -->
                     </div>
 
-                    <button type="submit" class="btn btn-primary float-right">
+                    <button type="submit" class="btn btn-warning float-right">
                         Submit <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
                     </button>
                 </form>

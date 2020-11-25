@@ -79,7 +79,7 @@
           <i class="glyphicon glyphicon-cloud"></i>
         </div>
         <div class="dbox__body">
-          <span class="dbox__count">8,252</span>
+          <span class="dbox__count">{{$clients_count}}</span>
           <span class="dbox__title">Number Of Clients</span>
         </div>
 

@@ -40,7 +40,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item dropdown" style="padding-left: 150px;">
+                    <li class="nav-item dropdown" style="padding-left: 80px;">
                         @auth
                             <a class="nav-link" href="{{ route('new_client') }}">
                                 <span class="glyphicon glyphicon-plus"></span>
@@ -48,13 +48,19 @@
                             </a>
                         @endauth
                     </li>
-                    <li class="nav-item dropdown" style="padding-left: 150px;">
+                    <li class="nav-item dropdown" style="padding-left: 80px;">
                         @auth
                             <a class="nav-link" href="{{ route('onboard_client') }}">
                                <span class="glyphicon glyphicon-flag"></span> OnBoard Clients</a>
                         @endauth
                     </li>
-                    <li class="nav-item dropdown" style="padding-left: 150px;">
+                    <li class="nav-item dropdown" style="padding-left: 80px;">
+                        @auth
+                            <a class="nav-link" href="{{ route('send_sms') }}">
+                                <span class="glyphicon glyphicon-envelope"></span> Send Custom Message</a>
+                        @endauth
+                    </li>
+                    <li class="nav-item dropdown" style="padding-left: 80px;">
                         @auth
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -89,9 +95,9 @@
             <div class="alert alert-success" role="alert">
                 {{ Session::get( 'success' ) }}
             </div>
-        @elseif( Session::has( 'errors' ))
+        @elseif( Session::has( 'error' ))
             <div class="alert alert-danger" role="alert">
-                {{ Session::get( 'errors' ) }}
+                {{ Session::get( 'error' ) }}
             </div>
         @endif
         </div>
