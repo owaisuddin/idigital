@@ -26,5 +26,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/send_sms', 'SmsController@sendSms')->name('send_sms');
     Route::get('/client_view/{id}', 'ClientController@show')->name('client_view');
     Route::post('/sendMessage', 'SmsController@sendCustomMessage')->name('sendMessage');
+    Route::get('/seo_optimization/{id}', 'ProgressController@seoOptimization')->name('seo_optimization');
 });
 

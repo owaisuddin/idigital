@@ -31,19 +31,23 @@
                 <td>
                     <a href="/client_view/{{$client->id}}" type="button"
                        class="btn btn-info btn-sm">
-                        <span class="glyphicon glyphicon-eye-open"></span> View
+                        <span class="glyphicon glyphicon-eye-open"></span> V
                     </a>
                     <a href="/client_edit/{{$client->id}}" type="button"
                        class="btn btn-success btn-sm">
-                        <span class="glyphicon glyphicon-pencil"></span> Edit
+                        <span class="glyphicon glyphicon-pencil"></span> E
                     </a>
                     <a href="/client_delete/{{$client->id}}" type="button"
                        class="btn btn-danger btn-sm">
-                        <span class="glyphicon glyphicon-remove"></span> Delete
+                        <span class="glyphicon glyphicon-trash"></span> D
                     </a>
                     <a href="/client_report/{{$client->id}}" type="button"
                        class="btn btn-warning btn-sm">
-                        <span class="glyphicon glyphicon-file"></span> Send Report To Client
+                        <span class="glyphicon glyphicon-file"></span> Send Report
+                    </a>
+                    <a href="/seo_optimization/{{$client->id}}" type="button"
+                       class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-road"></span> Seo Optimization
                     </a>
                 </td>
             </tr>
