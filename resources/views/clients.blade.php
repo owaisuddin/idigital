@@ -9,13 +9,14 @@
         <table class="table table-responsive" style="background-color: white">
             <thead>
             <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Business Name</th>
-                <th scope="col">Email</th>
+                <th scope="col"style="width: 13%;">Name</th>
+                <th scope="col" style="width: 15%;">Business Name</th>
+                <th scope="col" style="width: 10%;">Email</th>
                 <th scope="col">Phone</th>
-                <th scope="col">Website Url</th>
+                <th scope="col" style="width: 15%;">Website Url</th>
                 <th scope="col">Country</th>
                 <th scope="col">City</th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
@@ -31,24 +32,24 @@
                 <td>
                     <a href="/client_view/{{$client->id}}" type="button"
                        class="btn btn-info btn-sm">
-                        <span class="glyphicon glyphicon-eye-open"></span> V
+                        <span class="glyphicon glyphicon-eye-open"></span> View
                     </a>
                     <a href="/client_edit/{{$client->id}}" type="button"
                        class="btn btn-success btn-sm">
-                        <span class="glyphicon glyphicon-pencil"></span> E
+                        <span class="glyphicon glyphicon-pencil"></span> Edit
                     </a>
-                    <a href="/client_delete/{{$client->id}}" type="button"
+                    <!-- <a href="/client_delete/{{$client->id}}" type="button"
                        class="btn btn-danger btn-sm">
                         <span class="glyphicon glyphicon-trash"></span> D
-                    </a>
-                    <a href="/client_report/{{$client->id}}" type="button"
+                    </a> -->
+                    <!-- <a href="/client_report/{{$client->id}}" type="button"
                        class="btn btn-warning btn-sm">
                         <span class="glyphicon glyphicon-file"></span> Send Report
                     </a>
                     <a href="/seo_optimization/{{$client->id}}" type="button"
                        class="btn btn-default btn-sm">
                         <span class="glyphicon glyphicon-road"></span> Seo Optimization
-                    </a>
+                    </a> -->
                 </td>
             </tr>
             @endforeach

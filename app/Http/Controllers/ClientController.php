@@ -83,7 +83,8 @@ class ClientController extends Controller
      */
     public function edit($id)
     {
-        //
+        $client = Client::where('id',$id)->first();        
+        return view('edit_client')->with('client',$client);
     }
 
     /**
@@ -94,8 +95,25 @@ class ClientController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
+    {        
+        Client::where('id',$id)->update([
+            'name' => $request->get('name'),            
+            'email' => $request->get('email'),
+            'phone_number' => $request->get('phone_number'),
+            'website_url' => $request->get('website_url'),
+            'country' => $request->get('country'),
+            'state' => $request->get('state'),
+            'city' => $request->get('city'),
+            'business_name' => $request->get('business_name'),
+            'keywords' => $request->get('keywords'),            
+            'website_login' => $request->get('website_login'),
+            'hosting_login' => $request->get('hosting_login'),
+            'google_analytic' => $request->get('google_analytic'),
+            'google_search_console' => $request->get('google_search_console'),
+            'google_business_access' => $request->get('google_business_access')
+        ]);
+        
+        return redirect()->route('onboard_client')->withSuccess('Client successfully Updated.');
     }
 
     /**

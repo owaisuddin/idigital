@@ -21,6 +21,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/new_client', 'ClientController@create')->name('new_client');
     Route::get('/onboard_client', 'ClientController@index')->name('onboard_client');
     Route::get('/client_report/{id}', 'ClientController@sendReport')->name('client_report');
+    Route::get('/client_edit/{id}', 'ClientController@edit')->name('client_edit');
+    Route::post('/update_client/{id}', 'ClientController@update')->name('update_client');
     Route::post('/save_client', 'ClientController@store')->name('save_client');
     Route::post('/send_report/{id}', 'ClientController@sendReportToClient')->name('send_report');
     Route::get('/send_sms', 'SmsController@sendSms')->name('send_sms');
