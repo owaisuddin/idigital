@@ -18,7 +18,7 @@ class SmsController extends Controller
         $token  = env( 'TWILIO_TOKEN' );
         
         $client_info = Clients::where('id',$request->get('client_id'))->first();
-        $message = "idigitalFixIt Notification:\r\n\r\n"."Hello ".$client_info->name.",\r\n\r\n".$request->get('content')."\r\n\r\n"."Thanks.";
+        $message = "iDigitalFiXit Notification:\r\n\r\n"."Hello ".$client_info->name.",\r\n\r\n".$request->get('content')."\r\n\r\n"."Thanks.";
                   ;
         try{
             $client = new Client( $sid, $token );
