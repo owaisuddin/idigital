@@ -66,6 +66,7 @@
                                        autocomplete="phone_number"
                                        id="phone_number"
                                        autofocus>
+                                <small style="color:red"><strong>Number must be in +923102323700 format otherwise text message will not be sent.</strong></small>
                                 @if($errors->has('phone_number'))
                                     <code>{{ $errors->first('phone_number') }}</code>
                                 @endif

@@ -21,13 +21,19 @@
             </div>
             <div class="col-sm-4">
                 <div class="form-group">
-                    <label>Website Url : </label>
-                    <span>{{$client['website_url']}}</span>
+                    <label>Number : </label>
+                    <span>{{$client['phone_number']}}</span>
                 </div>
             </div>
         </div>
         <hr/>
         <div class="row" style="color: white; padding-top: 1%">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>Website Url : </label>
+                    <span>{{$client['website_url']}}</span>
+                </div>
+            </div>
             <div class="col-sm-4">
                 <div class="form-group">
                     <label>Country : </label>
@@ -40,15 +46,15 @@
                     <span>{{$client['state']}}</span>
                 </div>
             </div>
+        </div>
+        <hr/>
+        <div class="row" style="color: white; padding-top: 1%">
             <div class="col-sm-4">
                 <div class="form-group">
                     <label>City : </label>
                     <span>{{$client['city']}}</span>
                 </div>
             </div>
-        </div>
-        <hr/>
-        <div class="row" style="color: white; padding-top: 1%">
             <div class="col-sm-4">
                 <div class="form-group">
                     <label>Business Name : </label>
@@ -61,22 +67,22 @@
                     <span>{{$client['keywords']}}</span>
                 </div>
             </div>
+        </div>
+        <hr/>
+        <div class="row" style="color: white; padding-top: 1%">
             <div class="col-sm-4">
                 <div class="form-group">
                     <label>Website Login : </label>
                     <span>{{$client['website_login']}}</span>
                 </div>
             </div>
-        </div>
-        <hr/>
-        <div class="row" style="color: white; padding-top: 1%">
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <div class="form-group">
                     <label>Hosting login : </label>
                     <span>{{$client['hosting_login']}}</span>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <div class="form-group">
                     <label>Access to Google Analytic : </label>
                     <span>{{$client['google_analytic']}}</span>
