@@ -177,7 +177,8 @@
 
                         <div class="col-md-6">
                             <div class="form-group ">
-                                <label class="control-label">Keywords:
+                                <label class="control-label">Keywords
+                                    <span style="color:red"> *</span>
                                     <small>enter comma seperated keywords (like : mobile,phone)</small>
                                 </label>
                                 <input type="text"
@@ -239,10 +240,11 @@
                         <div class="col-md-6">
                             <div class="form-group ">
                                 <label class="control-label">Access to Google Analytic</label>
+                                <span style="color:red"> *</span>
                                 <input type="text"
                                        class="form-control @error('google_analytic') is-invalid @enderror"
                                        name="google_analytic"
-                                       value="{{ old('google_analytic') }}"
+                                       value="{{ old('google_analytic') }}" required
                                        placeholder="Enter client google analytic"
                                        value="{{ !empty($client->google_analytic) ? $client->google_analytic : ''}}"
                                        autocomplete="google_analytic"
@@ -257,10 +259,11 @@
                         <div class="col-md-6">
                             <div class="form-group ">
                                 <label class="control-label">Access to Google Search Console</label>
+                                <span style="color:red"> *</span>
                                 <input type="text"
                                        class="form-control @error('google_search_console') is-invalid @enderror"
                                        name="google_search_console"
-                                       value="{{ old('google_search_console') }}"
+                                       value="{{ old('google_search_console') }}" required
                                        placeholder="Enter client google search console"
                                        value="{{ !empty($client->google_search_console) ? $client->google_search_console : ''}}"
                                        autocomplete="google_search_console"
